@@ -52,13 +52,13 @@ class _AllProductsScreenState extends State<AllProductsScreen> {
                     ),
                     const SizedBox(height: 25,),
                     Responsive(
-                      mobile: ProducGrid(
+                      mobile: ProductGridWidget(
                         isInMain: false,
                         crossAxisCount: size.width < 650 ? 2 : 4,
                         childAspectRatio:
                             size.width < 650 && size.width > 350 ? 1.1 : 0.8,
                       ),
-                      desktop: ProducGrid(
+                      desktop: ProductGridWidget(
                         isInMain: false,
                         childAspectRatio: size.width < 1400 ? 0.8 : 1.05,
                       ),
@@ -71,6 +71,5 @@ class _AllProductsScreenState extends State<AllProductsScreen> {
         ),
       ),
     );
-    ;
   }
 }

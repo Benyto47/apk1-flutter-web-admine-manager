@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:grocery_admin_panel/controllers/MenuController.dart'
     as MyMenuController;
 import 'package:grocery_admin_panel/responsive.dart';
-import 'package:grocery_admin_panel/services/utils.dart';
-import 'package:grocery_admin_panel/widgets/grid_products.dart';
 import 'package:grocery_admin_panel/widgets/header.dart';
 import 'package:grocery_admin_panel/widgets/orders_list.dart';
 import 'package:grocery_admin_panel/widgets/side_menu.dart';
@@ -19,7 +17,6 @@ class AllOrdersScreen extends StatefulWidget {
 class _AllOrdersScreenState extends State<AllOrdersScreen> {
   @override
   Widget build(BuildContext context) {
-    Size size = Utils(context).getScreenSize;
 
     return Scaffold(
       key: context.read<MyMenuController.MenuController>().getOrdersScaffoldKey,
@@ -66,6 +63,5 @@ class _AllOrdersScreenState extends State<AllOrdersScreen> {
         ),
       ),
     );
-    ;
   }
 }
